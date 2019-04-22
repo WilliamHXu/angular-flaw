@@ -1,0 +1,24 @@
+<p>
+  userslist works!
+</p>
+<div class="container">
+
+  <table class="table table-striped">
+    <thead>
+    <th>userid</th>
+    <th>User Name</th>
+    <th>Operations </th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{user.userid}}</td>
+      <td>{{user.username}}</td>
+
+      <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+        <button class="btn btn-primary" (click)="updateUser(user)">Edit</button></td>
+
+    </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-primary" (click)="newUser()">New User</button>
+</div>
