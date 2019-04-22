@@ -11,6 +11,8 @@ export class ChannelsComponent implements OnInit {
 
   channels = CHANNELS;
 
+  selectedChannel: Channel;
+
   constructor() { }
 
   ngOnInit() {
