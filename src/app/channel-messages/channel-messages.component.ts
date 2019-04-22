@@ -13,10 +13,12 @@ export class ChannelMessagesComponent implements OnInit {
   @Input() channel: Channel;
   private messages: Message[];
 
-  constructor(private messageService: MessageService) { }
+  constructor(private messageService: MessageService) {}
 
   ngOnInit() {
-    this.getMessagesInChannel();
+    if (this.channel !== undefined) {
+      this.getMessagesInChannel();
+    }
   }
 
   getMessagesInChannel(): void {
