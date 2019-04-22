@@ -1,13 +1,110 @@
-<div *ngIf="channel">
-  <h2>Messages</h2>
-  <ul class="messages">
-    <li *ngFor="let message of messages">
-      <a routerLink="/messages/{{message.id}}">
-        <span class="badge">{{message.id}}</span> {{message.messageBody}}
-      </a>
-    </li>
-  </ul>
+<div class="item">
+    <div *ngIf="channel">
+      <div class="view-message-container">
+        <ul class="messages">
+          <li *ngFor="let message of messages">
+            <a routerLink="/messages/{{message.id}}">
+              <span class="badge">{{message.id}}</span> {{message.messageBody}}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div *ngIf="channel == undefined || channel.name == undefined">
+      <h2>Messages has no selected channel</h2>
+    </div>
 </div>
-<div *ngIf="channel == undefined || channel.name == undefined">
-  <h2>Messages has no selected channel</h2>
+
+
+<div class="view-message-container">
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
+<!--  <p>This is a message</p>-->
 </div>
+
+
+<app-new-message-bar></app-new-message-bar>
