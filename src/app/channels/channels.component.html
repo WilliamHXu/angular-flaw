@@ -1,9 +1,10 @@
 <div class="split left">
 <div id="left-sidebar">
-  <h3>Channels</h3>
+  <h2>Channels</h2>
   <ul>
-    <li *ngFor="let channel of channels">
-      <span class="badge">{{channel.id}}</span> {{channel.name}}
+    <li *ngFor="let channel of channels" (click)="onSelect(channel)">
+      <!--<a routerLink=""-->
+      {{channel.name}}
     </li>
   </ul>
 </div>

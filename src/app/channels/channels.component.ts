@@ -18,4 +18,8 @@ export class ChannelsComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSelect(channel: Channel): void {
+    this.selectedChannel = channel;
+  }
+
 }
