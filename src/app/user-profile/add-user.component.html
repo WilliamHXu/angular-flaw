@@ -1,0 +1,12 @@
+<div class="col-md-6">
+  <h2 class="text-left">Add User</h2>
+  <form>
+
+    <div class="form-group">
+      <label for="username">User Name:</label>
+      <input [(ngModel)]="user.username" placeholder="User Name" name="username" class="form-control" id="username">
+    </div>
+
+    <button class="btn btn-success" (click)="createUser()">New User</button>
+  </form>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+
+  <!--<table class="table table-striped">-->
+    <!--<thead>-->
+    <!--<th>UserId</th>-->
+    <!--<th>User Name</th>-->
+    <!--<th>Actions </th>-->
+    <!--</thead>-->
+    <!--<tbody>-->
+   <div *ngFor="let user of users">
+      <td>{{user.userid}}</td>
+      <td>{{user.username}}</td>
+      <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+        <!--<button class="btn btn-primary" (click)="updateUser(user)">Edit</button></td>-->
+
+    <!--</tr>-->
+    <!--</tbody>-->
+  <!--</table>-->
+</div>
+</div>
