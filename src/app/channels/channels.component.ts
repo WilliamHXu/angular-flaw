@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Channel} from '../channel';
+import { CHANNELS } from '../mock-channels';
 
 @Component({
   selector: 'app-channels',
@@ -8,7 +9,7 @@ import {Channel} from '../channel';
 })
 export class ChannelsComponent implements OnInit {
 
-  channels: Channel[];
+  channels = CHANNELS;
 
   constructor() { }
 

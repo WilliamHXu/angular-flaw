@@ -2,7 +2,9 @@
 <div id="left-sidebar">
   <h3>Channels</h3>
   <ul>
-    <li *ngFor="let channel of channels">{{channel.name}}</li>
+    <li *ngFor="let channel of channels">
+      <span class="badge">{{channel.id}}</span> {{channel.name}}
+    </li>
   </ul>
 </div>
 </div>
