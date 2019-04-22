@@ -2,9 +2,9 @@
 <div id="left-sidebar">
   <h2>Channels</h2>
   <ul>
-    <li *ngFor="let channel of channels" (click)="onSelect(channel)">
+    <li *ngFor="let channel of channels">
       <!--<a routerLink=""-->
-      {{channel.name}}
+      <button class="btn btn-info" (click)="onSelect(channel)">{{channel.name}}</button>
     </li>
   </ul>
 </div>
