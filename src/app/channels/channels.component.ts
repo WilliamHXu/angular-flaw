@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Channel} from '../channel';
-import { CHANNELS } from '../mock-channels';
+import {ChannelService} from '../channel.service';
 
 @Component({
   selector: 'app-channels',
@@ -9,11 +9,25 @@ import { CHANNELS } from '../mock-channels';
 })
 export class ChannelsComponent implements OnInit {
 
-  channels = CHANNELS;
+  channels: Channel[];
 
-  constructor() { }
+  private channelService: ChannelService;
+
+  selectedChannel: Channel;
+
+  constructor(channelService: ChannelService) {
+    this.channelService = channelService;
+  }
 
   ngOnInit() {
+    this.channelService.getChannels()
+      .subscribe((response) => {
+        this.channels = response;
+      });
+  }
+
+  onSelect(channel: Channel): void {
+    this.selectedChannel = channel;
   }
 
 }
