@@ -15,6 +15,7 @@ import { UserComponent } from './user-profile/user.component';
 import { AddUserComponent } from './user-profile/add-user.component';
 import { HttpClientModule} from '@angular/common/http';
 import { NewMessageBarComponent } from './new-message-bar/new-message-bar.component';
+import {MessageService} from './message.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { NewMessageBarComponent } from './new-message-bar/new-message-bar.compon
     ChannelsComponent,
     AboutComponent,
     MessagesComponent,
-    ChannelMessagesComponent
+    ChannelMessagesComponent,
     UserComponent,
     AddUserComponent,
     NewMessageBarComponent
@@ -36,7 +37,7 @@ import { NewMessageBarComponent } from './new-message-bar/new-message-bar.compon
     FormsModule,
     HttpClientModule
   ],
-  providers: [UserProfileService],
+  providers: [UserProfileService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
