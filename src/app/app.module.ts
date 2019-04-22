@@ -9,6 +9,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { ChannelsComponent } from './channels/channels.component';
 import { AboutComponent } from './about/about.component';
 import { MessagesComponent } from './messages/messages.component';
+import { ChannelMessagesComponent } from './channel-messages/channel-messages.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MessagesComponent } from './messages/messages.component';
     UserProfileComponent,
     ChannelsComponent,
     AboutComponent,
-    MessagesComponent
+    MessagesComponent,
+    ChannelMessagesComponent
   ],
   imports: [
     BrowserModule,

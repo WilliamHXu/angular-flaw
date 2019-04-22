@@ -1,0 +1,13 @@
+<div *ngIf="channel">
+  <h2>Messages</h2>
+  <ul class="messages">
+    <li *ngFor="let message of messages">
+      <a routerLink="/messages/{{message.id}}">
+        <span class="badge">{{message.id}}</span> {{message.messageBody}}
+      </a>
+    </li>
+  </ul>
+</div>
+<div *ngIf="channel == undefined">
+  <h2>Messages has no selected channel</h2>
+</div>
