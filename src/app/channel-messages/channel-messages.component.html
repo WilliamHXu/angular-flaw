@@ -8,6 +8,6 @@
     </li>
   </ul>
 </div>
-<div *ngIf="channel == undefined">
+<div *ngIf="channel == undefined || channel.name == undefined">
   <h2>Messages has no selected channel</h2>
 </div>

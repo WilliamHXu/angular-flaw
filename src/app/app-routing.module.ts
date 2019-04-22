@@ -11,7 +11,7 @@ import {AddUserComponent} from './user-profile/add-user.component';
 const routes: Routes = [
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: 'home', component: HomeComponent},
-  {path: 'user-profile', component: UserProfileComponent},
+  {path: 'profile', component: UserProfileComponent},
   {path: 'channels', component: ChannelsComponent},
   {path: 'about', component: AboutComponent},
   {path: 'users', component: UserComponent },
