@@ -1,7 +1,11 @@
 <div class="split left">
-<div class="centered">
-  <h2>Channels</h2>
-  <p></p>
+<div id="left-sidebar">
+  <h3>Channels</h3>
+  <ul>
+    <li *ngFor="let channel of channels">
+      <span class="badge">{{channel.id}}</span> {{channel.name}}
+    </li>
+  </ul>
 </div>
 </div>
 
