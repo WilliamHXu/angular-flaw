@@ -29,10 +29,15 @@ export class ChannelsComponent implements OnInit {
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
-    this.channelService.createChannel({name} as Channel)
+    this.channelService.createChannel({ name } as Channel)
       .subscribe(channel => {
         this.channels.push(channel);
       });
+  }
+
+  delete(channel: Channel): void {
+    this.channels = this.channels.filter(c => c !== channel);
+    this.channelService.deleteChannel(channel).subscribe();
   }
 
   onSelect(channel: Channel): void {
