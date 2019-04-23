@@ -39,6 +39,11 @@ export class ChannelsComponent implements OnInit {
       });
   }
 
+  delete(channel: Channel): void {
+    this.channels = this.channels.filter(c => c !== channel);
+    this.channelService.deleteChannel(channel).subscribe();
+  }
+
   onSelect(channel: Channel): void {
     this.selectedChannel = channel;
   }

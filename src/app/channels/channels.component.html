@@ -5,6 +5,7 @@
     <li *ngFor="let channel of channels">
       <!--<a routerLink=""-->
       <button class="btn btn-info" (click)="onSelect(channel)">{{channel.name}}</button>
+      <button class="btn btn-info" style="float: right;"(click)="delete(channel)">x</button>
     </li>
   </ul>
 </div>
