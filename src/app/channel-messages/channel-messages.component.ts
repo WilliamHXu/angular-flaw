@@ -10,19 +10,29 @@ import {MessageService} from '../message.service';
 })
 export class ChannelMessagesComponent implements OnInit {
 
-  @Input() channel: Channel;
+  private _channel: Channel;
   private messages: Message[];
+
 
   constructor(private messageService: MessageService) {}
 
+
+  get channel(): Channel {
+    return this._channel;
+  }
+
+  @Input()
+  set channel(channel: Channel) {
+    this._channel = channel;
+    this.getMessagesInChannel();
+  }
+
   ngOnInit() {
-    if (this.channel !== undefined) {
-      this.getMessagesInChannel();
-    }
   }
 
   getMessagesInChannel(): void {
-    this.messageService.getMessagesByChannel(this.channel).subscribe(messages => this.messages = messages);
+    this.messageService.getMessagesByChannel(this.channel)
+      .subscribe(messages => this.messages = messages);
   }
 
 }
