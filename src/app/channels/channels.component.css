@@ -50,3 +50,11 @@ li:before {
   content: "#";
 }
 
+
+.channel-area span {
+  height: 30px;
+}
+
+.channel-area h2 {
+  line-height: 1;
+}
