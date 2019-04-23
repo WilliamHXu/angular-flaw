@@ -14,7 +14,7 @@ export class MessageService {
   };
 
   private messagesUrl = 'http://localhost:8080/messages';
-  private channelsUrl = 'http://localhost:8080/channel';
+  private channelsUrl = 'http://localhost:8080/channels';
 
   constructor(private http: HttpClient) { }
 
