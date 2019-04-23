@@ -1,6 +1,6 @@
 <div class="split left">
 <div id="left-sidebar" class="channel-area">
-  <h2>Channels <small class="btn btn-info"><span class="h3">+</span></small></h2>
+  <h2>Channels <!--<small class="btn btn-info"><span class="h3">+</span></small>--></h2>
   <ul>
     <li *ngFor="let channel of channels">
       <!--<a routerLink=""-->
@@ -8,8 +8,20 @@
     </li>
   </ul>
 </div>
+  <form>
+  <div>
+    <label>Channel name:
+      <input #channelName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <!--<button class="btn btn-info" (click)="add(channelName.value); channelName.value=''">
+      add
+    </button>-->
+    <button class="btn btn-success" (click)="add(channelName.value)">Add Channel</button>
+  </div>
+</form>
 </div>
-
 <div class="split right">
     <app-channel-messages [channel]="selectedChannel"></app-channel-messages>
 </div>
+

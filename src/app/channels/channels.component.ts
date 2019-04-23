@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Channel} from '../channel';
 import {ChannelService} from '../channel.service';
+import {User} from '../user';
 
 @Component({
   selector: 'app-channels',
@@ -27,9 +28,12 @@ export class ChannelsComponent implements OnInit {
   }
 
   add(name: string): void {
+    // const newChannel = new Channel();
+    // const newUser = new User();
+    // newChannel.users = new Array(newUser);
     name = name.trim();
     if (!name) { return; }
-    this.channelService.createChannel({name} as Channel)
+    this.channelService.createChannel({ name } as Channel)
       .subscribe(channel => {
         this.channels.push(channel);
       });
