@@ -26,6 +26,15 @@ export class ChannelsComponent implements OnInit {
       });
   }
 
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.channelService.createChannel({name} as Channel)
+      .subscribe(channel => {
+        this.channels.push(channel);
+      });
+  }
+
   onSelect(channel: Channel): void {
     this.selectedChannel = channel;
   }
