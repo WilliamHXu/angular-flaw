@@ -3,9 +3,7 @@
       <div class="view-message-container">
         <ul class="messages">
           <li *ngFor="let message of messages">
-            <a routerLink="/messages/{{message.id}}">
-              <span class="badge">{{message.id}}</span> {{message.messageBody}}
-            </a>
+              <span class="badge">{{message.user.username}}</span> {{message.messageBody}}
           </li>
         </ul>
       </div>

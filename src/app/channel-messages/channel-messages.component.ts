@@ -31,7 +31,7 @@ export class ChannelMessagesComponent implements OnInit {
   }
 
   getMessagesInChannel(): void {
-    this.messageService.getMessagesByChannel(this.channel)
+    this.messageService.getMessagesByChannel(this._channel)
       .subscribe(messages => this.messages = messages);
   }
 

@@ -12,13 +12,12 @@ export class ChannelService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  private channelsUrl = 'http://localhost:8080/channels';
+  private channelsUrl = 'http://localhost:8080/channels/';
 
   constructor(private http: HttpClient) { }
 
   getChannels(): Observable<Channel[]> {
-    return this.http.get<Channel[]>(this.channelsUrl)
-      .pipe(map((res: any) => res._embedded.channels));
+    return this.http.get<Channel[]>(this.channelsUrl);
   }
 
   getChannel(channelId: number): Observable<Channel> {

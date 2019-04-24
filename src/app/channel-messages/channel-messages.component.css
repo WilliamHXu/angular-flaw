@@ -10,3 +10,8 @@
   height: 6vh;
   width: 75vw;
 }
+
+ul {
+  text-decoration: none;
+  list-style: none;
+}

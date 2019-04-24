@@ -20,7 +20,7 @@ export class MessageService {
 
   getMessagesByChannel(channel: Channel | number): Observable<Message[]> {
     const channelId = typeof channel === 'number' ? channel : channel.id;
-    const url = '${this.channelsUrl}/${channelId}/messages';
+    const url = `${this.channelsUrl}/${channelId}/messages`;
     return this.http.get<Message[]>(url);
   }
 
@@ -29,7 +29,7 @@ export class MessageService {
   }
 
   getMessage(messageId: number): Observable<Message> {
-    const url = '${this.messagesUrl}/${messageId}';
+    const url = `${this.messagesUrl}/${messageId}`;
     return this.http.get<Message>(url);
   }
 
@@ -43,7 +43,7 @@ export class MessageService {
 
   deleteMessage(message: Message | number): Observable<Message> {
     const id = typeof message === 'number' ? message : message.id;
-    const url = '${this.messagesUrl}/${id}';
+    const url = `${this.messagesUrl}/${id}`;
     return this.http.delete<Message>(url, this.httpOptions);
   }
 }
