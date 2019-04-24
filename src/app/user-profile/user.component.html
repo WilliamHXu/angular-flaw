@@ -1,20 +1,42 @@
 <div class="container">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th scope="col">UserName</th>
+      <th scope="col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <div *ngFor="let user of users">
+      <td>{{user.username}}</td>
+      <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
+        <button class="btn btn-primary" (click)="updateUser(user)">Edit</button></td>
 
-  <!--<table class="table table-striped">-->
+    </div>
+    </tbody>
+  </table>
+</div>
+
+<!--<div class="container">-->
+
+  <!--<table class="table table-striped">>-->
     <!--<thead>-->
-    <!--<th>UserId</th>-->
-    <!--<th>User Name</th>-->
+    <!--&lt;!&ndash;<th>UserId</th>&ndash;&gt;-->
+    <!--<th>UserName</th>-->
     <!--<th>Actions </th>-->
     <!--</thead>-->
     <!--<tbody>-->
-   <div *ngFor="let user of users">
-      <td>{{user.userid}}</td>
-      <td>{{user.username}}</td>
-      <td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>
-        <!--<button class="btn btn-primary" (click)="updateUser(user)">Edit</button></td>-->
+   <!--<div *ngFor="let user of users">-->
+      <!--&lt;!&ndash;<td>{{user.userid}}</td>&ndash;&gt;-->
+      <!--<td>{{user.username}}</td>-->
+     <!--<td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>-->
+       <!--<button class="btn btn-primary" (click)="updateUser(user)">Edit</button></td>-->
 
-    <!--</tr>-->
-    <!--</tbody>-->
+      <!--&lt;!&ndash;<td><button class="btn btn-danger" (click)="deleteUser(user)">Delete</button>&ndash;&gt;-->
+        <!--&lt;!&ndash;<button class="btn btn-primary" (click)="updateUser(user)">Edit</button></td>&ndash;&gt;-->
+<!--</div>-->
+
+    <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+    <!--&lt;!&ndash;</tbody>&ndash;&gt;-->
   <!--</table>-->
-</div>
-</div>
+<!--</div>-->
