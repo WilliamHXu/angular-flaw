@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {UserProfileService} from '../user-profile/user-profile.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-headerbar',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderbarComponent implements OnInit {
 
-  constructor() { }
+
+  subsription: Subscription;
+  userName: string;
+  constructor(private userProfileService: UserProfileService) {
+    this.subsription = this.userProfileService.userChanged.subscribe(
+      userName => this.userName = userName
+    );
+  }
 
   ngOnInit() {
   }
