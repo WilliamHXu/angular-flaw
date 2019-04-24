@@ -52,13 +52,13 @@ export class ChannelMessagesComponent implements OnInit {
   }
 
   initializeWebSocketConnection() {
-    this.serverUrl = 'ws://localhost:8080/chat';
+    this.serverUrl = 'ws://localhost:8080/messages/topic/chat';
     this.receiveUrl = '/receive/reply';
     let ws = new WebSocket(this.serverUrl);
     this.stompClient = Stomp.over(ws);
     let that = this;
     this.stompClient.connect({}, function() {
-      that.stompClient.subscribe('/receive/reply', (message) => {
+      that.stompClient.subscribe('/messages/topic/chat', (message) => {
         if (message.messageBody) {
           $('.messages').append('<li> <span class="badge">{{message.user.username}}</span> {{message.messageBody}} </li>');
           console.log(message.messageBody);
