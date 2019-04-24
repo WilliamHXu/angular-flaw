@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {Channel} from '../channel';
 import {ChannelService} from '../channel.service';
+import {User} from '../user';
+import {UserProfileService} from '../user-profile/user-profile.service';
 
 @Component({
   selector: 'app-channels',
@@ -11,9 +13,15 @@ export class ChannelsComponent implements OnInit {
 
   channels: Channel[];
 
+  users: User[];
+
   private channelService: ChannelService;
 
+  private userProfileService: UserProfileService;
+
   selectedChannel: Channel;
+
+  selectedUser: User;
 
   constructor(channelService: ChannelService) {
     this.channelService = channelService;
@@ -23,6 +31,13 @@ export class ChannelsComponent implements OnInit {
     this.channelService.getChannels()
       .subscribe((response) => {
         this.channels = response;
+      });
+  }
+
+  ngOnInitUsers() {
+    this.userProfileService.getUsers()
+      .subscribe((response) => {
+        this.users = response;
       });
   }
 
@@ -42,6 +57,10 @@ export class ChannelsComponent implements OnInit {
 
   onSelect(channel: Channel): void {
     this.selectedChannel = channel;
+  }
+
+  onSelectUser(user: User): void {
+    this.selectedUser = user;
   }
 
 }
