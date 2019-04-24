@@ -1,16 +1,25 @@
 <!--<p>
   user-profile works!
 </p>-->
-<div class="container-fluid">
-  <div class="col-md-offset-1">
-    <h1>
-      Welcome to UserProfiles!
-    </h1>
-  </div>
+<!--<div class="container-fluid">-->
+  <!--<div class="col-md-offset-1">-->
+    <!--<h1>-->
+      <!--Welcome to UserProfiles!-->
+    <!--</h1>-->
+  <!--</div>-->
 
-  <a routerLink="/users"> Active Users</a>
-  <a style="margin-left:20px" routerLink="/add">Add User</a>
-  <br/>
+  <!--<a routerLink="/users"> Active Users</a>-->
+  <!--<a style="margin-left:20px" routerLink="/add">Add User</a>-->
+  <!--<br/>-->
+  <!--<router-outlet></router-outlet>-->
+<!--</div>-->
+
+
+<div class="container-fluid">
   <router-outlet></router-outlet>
+  <br/>
+  <app-add-user></app-add-user>
+  <br/>
+  <app-user></app-user>
 </div>
 

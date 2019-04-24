@@ -13,6 +13,8 @@ import {User} from '../user';
 export class AddUserComponent implements OnInit {
   user: User = new User();
 
+  interval: any;
+
   constructor(private  router: Router, private userService: UserProfileService) { }
 
 
@@ -20,10 +22,15 @@ export class AddUserComponent implements OnInit {
     this.userService.createUser(this.user)
       .subscribe( data => {
         alert('User created successfully.');
+        location.reload();
       });
 
   }
 
+
+  // refreshData(){
+  //   this.userService.updateData(); // simply signal for the service to update its data stream
+  // }
 
   ngOnInit() {
   }
