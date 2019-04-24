@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+  margin: 40px;
+}
+
+.image-container {
+  text-align: center;
+}
+
+.image-container img {
+  margin: 0 auto;
+}
+
+p {
+  margin: 40px 300px;
+  border-bottom: #3f3d3b solid;
+}
+
+.about-container {
+  background-color: #17a2b8;
+  color: white;
+  padding: 30px;
+}
+
+.about-container > h1:first-child {
+  margin-top: 0;
+}
+
+.about-container > p:last-child {
+  margin-bottom: 0;
+}

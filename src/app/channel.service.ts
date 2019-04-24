@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable} from 'rxjs';
 import {Channel} from 'src/app/channel';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,13 @@ export class ChannelService {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
 
-  private channelsUrl = 'http://localhost:8080/channel';
+  private channelsUrl = 'http://localhost:8080/channels';
 
   constructor(private http: HttpClient) { }
 
   getChannels(): Observable<Channel[]> {
-    return this.http.get<Channel[]>(this.channelsUrl);
+    return this.http.get<Channel[]>(this.channelsUrl)
+      .pipe(map((res: any) => res._embedded.channels));
   }
 
   getChannel(channelId: number): Observable<Channel> {
